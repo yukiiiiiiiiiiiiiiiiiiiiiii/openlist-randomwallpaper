@@ -6,4 +6,4 @@
 以上就设置完了，每次进入openlist页面，都会有随机的背景图，告别枯燥乏味的页面。<br>
 以下为横屏和竖屏的效果图。<br>
 <img src="https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1750821835707/横屏.png" alt="横屏图片"><br>
-<img src="https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1750821843380/竖屏.jpg" alt="竖屏图片">
+<img src="https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1750821843380/竖屏.jpg" alt="竖屏图片" width="500">
