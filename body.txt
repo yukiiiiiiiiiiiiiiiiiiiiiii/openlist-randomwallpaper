@@ -1,0 +1,32 @@
+<script>
+// 生成001-005的随机数
+function getRandomNum() {
+    const num = Math.floor(Math.random() * 5) + 1;
+    return num.toString().padStart(3, '0');
+}
+
+// 设置背景图片
+function setBackground() {
+    const randomNum = getRandomNum();
+    let imagePath;
+    
+    // 检测屏幕方向
+    if (window.matchMedia("(orientation: landscape)").matches) {
+        imagePath = `http://192.168.188.2:8080/yuki/1/imageH/${randomNum}.jpg`;
+    } else {
+        imagePath = `http://192.168.188.2:8080/yuki/1/imageS/${randomNum}.jpg`;
+    }
+    
+    // 设置背景图并自适应
+    document.body.style.backgroundImage = `url(${imagePath})`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+}
+
+// 初始设置和屏幕方向变化监听
+setBackground();
+window.addEventListener('orientationchange', setBackground);
+window.addEventListener('resize', setBackground);
+</script>
