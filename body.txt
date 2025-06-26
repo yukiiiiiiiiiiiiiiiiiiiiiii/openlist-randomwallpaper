@@ -1,32 +1,13 @@
 <script>
-// 生成001-005的随机数
-function getRandomNum() {
-    const num = Math.floor(Math.random() * 5) + 1;
-    return num.toString().padStart(3, '0');
-}
+// 获取要设置背景图的元素，假设是body元素
+const element = document.body;
 
-// 设置背景图片
-function setBackground() {
-    const randomNum = getRandomNum();
-    let imagePath;
-    
-    // 检测屏幕方向
-    if (window.matchMedia("(orientation: landscape)").matches) {
-        imagePath = `http://192.168.188.2:8080/yuki/1/imageH/${randomNum}.jpg`;
-    } else {
-        imagePath = `http://192.168.188.2:8080/yuki/1/imageS/${randomNum}.jpg`;
-    }
-    
-    // 设置背景图并自适应
-    document.body.style.backgroundImage = `url(${imagePath})`;
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-}
+// 指定图片的URL
+const imageUrl = 'http://192.168.188.2:1234';
 
-// 初始设置和屏幕方向变化监听
-setBackground();
-window.addEventListener('orientationchange', setBackground);
-window.addEventListener('resize', setBackground);
+// 设置CSS背景图及自适应属性
+element.style.backgroundImage = `url(${imageUrl})`;
+element.style.backgroundSize = 'cover';
+element.style.backgroundPosition = 'center'; // 背景图居中显示
+element.style.backgroundRepeat = 'no-repeat'; // 防止背景图重复
 </script>
