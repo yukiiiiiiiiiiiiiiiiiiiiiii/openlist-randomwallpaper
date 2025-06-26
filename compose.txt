@@ -8,4 +8,4 @@ services:
 # 横屏图片
             - './landscape:/var/www/html/landscape'
         ports:
-            - '8080:80'
+            - '1234:80'
